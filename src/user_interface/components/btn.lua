@@ -1,8 +1,6 @@
-local button = gClass("button")
+local class = require("middleclass")
+local button = class("button")
 
-
-
----new
 ---@param table table
 ---@param text string
 ---@param callback function
@@ -69,6 +67,7 @@ function button.Validate(table,text,callback)
         error("Some of the parameters you just inserted in this constructor are not correct.")
     end
 end
+
 ---Static Function to create a preset of a certain Button
 ---@param x any
 ---@param y any

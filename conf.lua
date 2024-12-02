@@ -1,5 +1,3 @@
-
-
 function love.conf(conf_table)
 
     conf_table.window.title = "Keyboard Game"
@@ -8,5 +6,5 @@ function love.conf(conf_table)
     conf_table.window.height = 900
     gWindowHeight = conf_table.window.height
     conf_table.window.fullscreen = false
-    --conf_table.window.fullscreentype  = "desktop
-end
+    conf_table.console = true
+    end
