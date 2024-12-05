@@ -27,6 +27,8 @@ local class = require("middleclass")
 
 local state_game = require('stateGame')
 
+local flux = require('flux')
+
 gDebug = false
 currentState = state_game:new()
 
@@ -44,8 +46,16 @@ end
 
 function love.update(dt)
     currentState:update(dt)
+    flux.update(dt)
 end
 
+function love.mousepressed(x,y,mouseBtn)
+   currentState:mousepressed(x,y,mouseBtn) 
+end
+
+function love.mousereleased(x,y,mouseBtn)
+   currentState:mousereleased(x,y,mouseBtn) 
+end
 
 
 
